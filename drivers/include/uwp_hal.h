@@ -34,6 +34,17 @@ extern "C" {
 #include "hal_pinmap.h"
 #include "hal_pinmux_api.h"
 
+
+#define GPIO_PA device_get_binding(DT_GPIO_PO_UWP_NAME)
+#define GPIO_PB device_get_binding("UWP_GPIO_P1")
+#define GPIO_PC device_get_binding("UWP_GPIO_P2")
+#define LED_DEV device_get_binding(DT_GPIO_LEDS_NAME)
+#define LED_PIN3 DT_GPIO_LEDS_LED_1_PIN
+#define LED_PIN2 DT_GPIO_LEDS_LED_3_PIN
+#define LED_PIN1 DT_GPIO_LEDS_LED_2_PIN
+#define PINMUX_DEV device_get_binding("pinmux_drv")
+
+
 #define TRUE   (1)
 #define FALSE  (0)
 
